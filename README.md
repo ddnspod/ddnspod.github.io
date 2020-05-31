@@ -22,13 +22,11 @@ Console.WriteLine($"My public IPv6 address is: {ipv6}");
 Go :  
 ```go
 package main
-
 import (
         "io/ioutil"
         "net/http"
         "os"
 )
-
 func main() {
         res, _ := http.Get("https://ipv6.ddnspod.com")
         ipv6, _ := ioutil.ReadAll(res.Body)
