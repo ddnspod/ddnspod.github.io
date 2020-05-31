@@ -12,7 +12,7 @@ Returns the visitor IPv6 address in plain text, useful for shell scripts or to f
 #### Usage example
 
 C# :  
-```C#
+```C++
 var httpClient = new HttpClient();
 var ipv6 = await httpClient.GetStringAsync("https://ipv6.ddnspod.com");
 Console.WriteLine($"My public IPv6 address is: {ipv6}");
@@ -43,7 +43,7 @@ try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://ipv6.
 ```  
 
 NodeJS :  
-```node
+```JavaScript
 var https = require("https");
 
 https.get({"host": "ipv6.ddnspod.com", "port": 443, "path": "/"}, function(resp) {
