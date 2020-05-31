@@ -46,7 +46,7 @@ try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://ipv6.
 ```  
 
 NodeJS :  
-```nodejs
+```node
 var https = require("https");
 
 https.get({"host": "ipv6.ddnspod.com", "port": 443, "path": "/"}, function(resp) {
