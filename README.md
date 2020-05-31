@@ -9,8 +9,7 @@ Returns the visitor IPv6 address in plain text, useful for shell scripts or to f
 - Example (curl):  
  `curl ipv6.ddnspod.com`  
 
-#### Usage example 
-Shell script : 
+#### Usage example (Shell script): 
 
 ```shell
 #!/bin/sh
