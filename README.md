@@ -10,13 +10,93 @@ Returns the visitor IPv6 address in plain text, useful for shell scripts or to f
 - Example (curl):  
  `curl ipv6.ddnspod.com`  
 
-Usage example (Shell script):
+#### Usage example
 
+C# :  
+```C#
+var httpClient = new HttpClient();
+var ip = await httpClient.GetStringAsync("https://ipv6.ddnspod.com");
+Console.WriteLine($"My public IPv6 address is: {ip}");
+```  
+
+Go :  
+```go
+package main
+
+import (
+        "io/ioutil"
+        "net/http"
+        "os"
+)
+
+func main() {
+        res, _ := http.Get("https://ipv6.ddnspod.com")
+        ip, _ := ioutil.ReadAll(res.Body)
+        os.Stdout.Write(ip)
+}
+```  
+
+Java :  
+```java
+try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://ipv6.ddnspod.com").openStream(), "UTF-8").useDelimiter("\\A")) {
+    System.out.println("My public IPv6 address is: " + s.next());
+} catch (java.io.IOException e) {
+    e.printStackTrace();
+}
+```  
+
+NodeJS :  
+```node
+var http = require("http");
+
+http.get({"host": "api.myip.la", "port": 80, "path": "/"}, function(resp) {
+  resp.on("data", function(ip) {
+    console.log("My public IPv6 address is: " + ip);
+  });
+});
+```  
+
+Perl :  
+```perl
+use strict;
+use warnings;
+use LWP::UserAgent;
+
+my $ua = new LWP::UserAgent();
+my $ip = $ua->get("https://ipv6.ddnspod.com")->content;
+print "My public IPv6 address is: ". $ip;
+```  
+
+PHP :  
+```php
+$ip = file_get_contents("https://ipv6.ddnspod.com");
+echo "My public IPv6 address is: " . $ip;
+```  
+
+Python :  
+```python
+# This example requires the requests library be installed. You can learn more
+# about the Requests library here: http://docs.python-requests.org/en/latest/
+from requests import get
+
+ip = get("https://ipv6.ddnspod.com").text
+print("My public IPv6 address is: {}".format(ip))
+```  
+
+Ruby :  
+```ruby
+require "net/http"
+
+ip = Net::HTTP.get(URI("https://ipv6.ddnspod.com"))
+puts "My public IPv6 address is: " + ip
+```   
+
+Shell :  
 ```shell
 #!/bin/sh
 
 ipv6=$(curl -s https://ipv6.ddnspod.com)
-echo "My IPv6 address is: $ipv6"
+echo "My public IPv6 address is: $ipv6"
 ```  
 
 Output example:
