@@ -100,11 +100,6 @@ echo "My public IPv6 address is: $ipv6"
 ```  
 
 
-Output example:
-
-```
-2400:3200::1
-```  
 
 ## Splicing IPv6 (Get appending IPv6 address in plain text format):
 Calling the API endpoint without any parameter will return IPv6 prefix for the visitor:
