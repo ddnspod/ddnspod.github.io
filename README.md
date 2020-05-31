@@ -9,94 +9,15 @@ Returns the visitor IPv6 address in plain text, useful for shell scripts or to f
 - Example (curl):  
  `curl ipv6.ddnspod.com`  
 
-#### Usage example
+#### Usage example 
+Shell script : 
 
-C# :  
-```C++
-var httpClient = new HttpClient();
-var ipv6 = await httpClient.GetStringAsync("https://ipv6.ddnspod.com");
-Console.WriteLine($"My public IPv6 address is: {ipv6}");
-```  
-
-Go :  
-```go
-package main
-import (
-        "io/ioutil"
-        "net/http"
-        "os"
-)
-func main() {
-        res, _ := http.Get("https://ipv6.ddnspod.com")
-        ipv6, _ := ioutil.ReadAll(res.Body)
-        os.Stdout.Write(ipv6)
-}
-```  
-
-Java :  
-```java
-try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://ipv6.ddnspod.com").openStream(), "UTF-8").useDelimiter("\\A")) {
-    System.out.println("My public IPv6 address is: " + s.next());
-} catch (java.io.IOException e) {
-    e.printStackTrace();
-}
-```  
-
-NodeJS :  
-```JavaScript
-var https = require("https");
-
-https.get({"host": "ipv6.ddnspod.com", "port": 443, "path": "/"}, function(resp) {
-  resp.on("data", function(ipv6) {
-    console.log("My public IPv6 address is: " + ipv6);
-  });
-});
-```  
-
-Perl :  
-```perl
-use strict;
-use warnings;
-use LWP::UserAgent;
-
-my $ua = new LWP::UserAgent();
-my $ipv6 = $ua->get("https://ipv6.ddnspod.com")->content;
-print "My public IPv6 address is: ". $ipv6;
-```  
-
-PHP :  
-```php
-$ipv6 = file_get_contents("https://ipv6.ddnspod.com");
-echo "My public IPv6 address is: " . $ipv6;
-```  
-
-Python :  
-```python
-# This example requires the requests library be installed. You can learn more
-# about the Requests library here: http://docs.python-requests.org/en/latest/
-from requests import get
-
-ipv6 = get("https://ipv6.ddnspod.com").text
-print("My public IPv6 address is: {}".format(ipv6))
-```  
-
-Ruby :  
-```ruby
-require "net/http"
-
-ipv6 = Net::HTTP.get(URI("https://ipv6.ddnspod.com"))
-puts "My public IPv6 address is: " + ipv6
-```   
-
-Shell :  
 ```shell
 #!/bin/sh
 
 ipv6=$(curl -s https://ipv6.ddnspod.com)
 echo "My public IPv6 address is: $ipv6"
 ```  
-
-
 
 ## Splicing IPv6 (Get appending IPv6 address in plain text format):
 Calling the API endpoint without any parameter will return IPv6 prefix for the visitor:
