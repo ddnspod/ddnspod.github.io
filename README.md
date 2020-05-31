@@ -15,8 +15,8 @@ Returns the visitor IPv6 address in plain text, useful for shell scripts or to f
 C# :  
 ```C#
 var httpClient = new HttpClient();
-var ip = await httpClient.GetStringAsync("https://ipv6.ddnspod.com");
-Console.WriteLine($"My public IPv6 address is: {ip}");
+var ipv6 = await httpClient.GetStringAsync("https://ipv6.ddnspod.com");
+Console.WriteLine($"My public IPv6 address is: {ipv6}");
 ```  
 
 Go :  
@@ -31,8 +31,8 @@ import (
 
 func main() {
         res, _ := http.Get("https://ipv6.ddnspod.com")
-        ip, _ := ioutil.ReadAll(res.Body)
-        os.Stdout.Write(ip)
+        ipv6, _ := ioutil.ReadAll(res.Body)
+        os.Stdout.Write(ipv6)
 }
 ```  
 
@@ -46,12 +46,12 @@ try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://ipv6.
 ```  
 
 NodeJS :  
-```node
-var http = require("http");
+```nodejs
+var https = require("https");
 
-http.get({"host": "api.myip.la", "port": 80, "path": "/"}, function(resp) {
-  resp.on("data", function(ip) {
-    console.log("My public IPv6 address is: " + ip);
+https.get({"host": "ipv6.ddnspod.com", "port": 443, "path": "/"}, function(resp) {
+  resp.on("data", function(ipv6) {
+    console.log("My public IPv6 address is: " + ipv6);
   });
 });
 ```  
@@ -63,14 +63,14 @@ use warnings;
 use LWP::UserAgent;
 
 my $ua = new LWP::UserAgent();
-my $ip = $ua->get("https://ipv6.ddnspod.com")->content;
-print "My public IPv6 address is: ". $ip;
+my $ipv6 = $ua->get("https://ipv6.ddnspod.com")->content;
+print "My public IPv6 address is: ". $ipv6;
 ```  
 
 PHP :  
 ```php
-$ip = file_get_contents("https://ipv6.ddnspod.com");
-echo "My public IPv6 address is: " . $ip;
+$ipv6 = file_get_contents("https://ipv6.ddnspod.com");
+echo "My public IPv6 address is: " . $ipv6;
 ```  
 
 Python :  
@@ -79,16 +79,16 @@ Python :
 # about the Requests library here: http://docs.python-requests.org/en/latest/
 from requests import get
 
-ip = get("https://ipv6.ddnspod.com").text
-print("My public IPv6 address is: {}".format(ip))
+ipv6 = get("https://ipv6.ddnspod.com").text
+print("My public IPv6 address is: {}".format(ipv6))
 ```  
 
 Ruby :  
 ```ruby
 require "net/http"
 
-ip = Net::HTTP.get(URI("https://ipv6.ddnspod.com"))
-puts "My public IPv6 address is: " + ip
+ipv6 = Net::HTTP.get(URI("https://ipv6.ddnspod.com"))
+puts "My public IPv6 address is: " + ipv6
 ```   
 
 Shell :  
@@ -98,6 +98,7 @@ Shell :
 ipv6=$(curl -s https://ipv6.ddnspod.com)
 echo "My public IPv6 address is: $ipv6"
 ```  
+
 
 Output example:
 
