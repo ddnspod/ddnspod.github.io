@@ -1,5 +1,4 @@
-
-# DDNSPod Free API
+# IPv6 DDNSPod Free API
 This service offers a REST API allowing to get a visitor IPv6-Only address and to query location information from any IPv6 address. It outputs JSON-encoded IP geolocation data.
 
 ## GetIP (Get IPv6 address in plain text format):
@@ -197,5 +196,4 @@ Output example:
 ## Errors
 ### Client Errors
 > When incorrect user input is entered, the server returns an Error, along with a JSON-encoded error message.
-
 
