@@ -64,7 +64,7 @@ The output is a JSON object containing the following elements:
 |      Parameter       |                        Description                            |
 | -------------------- | ------------------------------------------------------------- |
 | **ipv6**             | Visitor IPv6 address, or IPv6 address specified as parameter. |
-| **ipv6-full**        | IPv6 full 128-bit notation.                                   |
+| **full**        | IPv6 full 128-bit notation.                                   |
 | **range->start**     | The start IPv6 prefix for an IPv6 address range.              |
 | **range->end**       | The end IPv6 prefix for an IPv6 address range.                |
 | **cidr**             | The CIDR notation for an IPv6 addresses range.                |
