@@ -22,41 +22,33 @@ echo "My public IPv6 address is: $ipv6"
 Calling the API endpoint without any parameter will return IPv6 prefix for the visitor:
 
 - Example (JSON):  
- `https://ipv6.ddnspod.com/prefix`  
+ `GET /prefix`  
 
 Get IPv6 prefix for the visitor and Appending an IPv6 suffix as parameter return this IPv6 address:
 
 - Example (JSON):  
- `https://ipv6.ddnspod.com/prefix/1:2:3:4`  
+ `GET /prefix/1:2:3:4`  
   or:  
- `https://ipv6.ddnspod.com/prefix?suffix=1:2:3:4`  
-- Example (JSON):  
- `https://ipv6.ddnspod.com/prefix/:5`  
-  or:  
- `https://ipv6.ddnspod.com/prefix?suffix=:5`  
+ `GET /prefix/:5`  
+
 
 ## GeoIP (Get IPv6 address location in JSON format):
 Calling the API endpoint without any parameter will return location information for the visitor IPv6 address:
 
 - Example (JSON):  
- `https://ipv6.ddnspod.com/geoip`  
+ `GET /geoip`  
 - Example (Format-JSON):  
- `https://ipv6.ddnspod.com/geoip/format`  
-  or:  
- `https://ipv6.ddnspod.com/geoip?format=yes`  
+ `GET /geoip/format`  
+
 
 Appending an IP address as parameter will return location information for this IPv6 address:
 
 - Example (JSON):  
- `https://ipv6.ddnspod.com/geoip/2400:3200::1`  
-  or:  
- `https://ipv6.ddnspod.com/geoip?ipv6=2400:3200::1`  
+ `GET /geoip/2400:3200::1`  
+
 - Example (Format-JSON):  
- `https://ipv6.ddnspod.com/geoip/format/2400:3200::1`  
-  or:  
- `https://ipv6.ddnspod.com/geoip/format?ipv6=2400:3200::1`  
-  or:  
- `https://ipv6.ddnspod.com/geoip?format=yes&ipv6=2400:3200::1`  
+ `GET /geoip/format/2400:3200::1`  
+
 
 #### GeoIP Output Schema
 The output is a JSON object containing the following elements:
@@ -71,7 +63,7 @@ The output is a JSON object containing the following elements:
 | **addr->location**   | Name of the country,province,city,region.                     |
 | **addr->isp**        | ISP name.                                                     |
 | **disp**             | Location + ISP name.                                          |
-| **timestamp**        | The current timestamp.                                          |
+| **timestamp**        | The current timestamp.                                        |
 
 Output example:
 
@@ -97,13 +89,10 @@ Output example:
 Use CIDR notation to provide information about a given IPv6 address range.
 
 - Enter the starting and ending IPv6 address respectively:  
- `https://ipv6.ddnspod.com/cidr/2400:3200::/2400:3200:ffff::`  
-  or:  
- `https://ipv6.ddnspod.com/cidr?start=2400:3200::&end=2400:3200:ffff::`  
+ `GET /cidr/2400:3200::/2400:3200:ffff::`  
+
 - Enter the starting and ending IPv6 address respectively (Format-JSON):  
- `https://ipv6.ddnspod.com/cidr/format/2400:3200::/2400:3200:ffff::`  
-  or:  
- `https://ipv6.ddnspod.com/cidr?format=yes&start=2400:3200::&end=2400:3200:ffff::`  
+ `GET /cidr/format/2400:3200::/2400:3200:ffff::`  
 
 Output example:
 
@@ -114,6 +103,24 @@ Output example:
   "cidr": "2400:3200::/32"
 }
 ```  
+
+## Get Timestamp
+Appending parameters to obtain timestamps with different precision.
+
+- Get second timestamps:  
+ `GET /timestamp/s`  
+ 
+- Get millisecond timestamps (Default):  
+ `GET /timestamp`  
+  or:  
+ `GET /timestamp/ms`  
+ 
+- Get microsecond timestamps:  
+ `GET /timestamp/us`  
+ 
+- Get nanosecond timestamps:  
+  `GET /timestamp/ns`  
+
 
 ## Errors
 ### Client Errors
