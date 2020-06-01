@@ -107,18 +107,18 @@ Output example:
 ## Get Timestamp
 Appending parameters to obtain timestamps with different precision.
 
-- Get second timestamps:  
+- The second timestamps:  
  `GET /timestamp/s`  
  
-- Get millisecond timestamps (Default):  
+- The millisecond timestamps (Default):  
  `GET /timestamp`  
   or:  
  `GET /timestamp/ms`  
  
-- Get microsecond timestamps:  
+- The microsecond timestamps:  
  `GET /timestamp/us`  
  
-- Get nanosecond timestamps:  
+- The nanosecond timestamps:  
   `GET /timestamp/ns`  
 
 
