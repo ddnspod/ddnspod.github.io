@@ -5,9 +5,9 @@ This service offers a REST API allowing to get a visitor IPv6-Only address and t
 Returns the visitor IPv6 address in plain text, useful for shell scripts or to find the external Internet routable address.
 
 - Example (Plain text):  
- `https://ipv6.ddnspod.com`  
+ `https://ipv6.ddnspod.com:444`  
 - Example (curl):  
- `curl ipv6.ddnspod.com`  
+ `curl ipv6.ddnspod.com:81`  
 
 #### Usage example (Shell script): 
 
