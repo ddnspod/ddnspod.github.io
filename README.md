@@ -14,7 +14,7 @@ Returns the visitor IPv6 address in plain text, useful for shell scripts or to f
 ```shell
 #!/bin/sh
 
-ipv6=$(curl -s https://ipv6.ddnspod.com)
+ipv6=$(curl -s https://ipv6.ddnspod.com:444)
 echo "My public IPv6 address is: $ipv6"
 ```  
 
