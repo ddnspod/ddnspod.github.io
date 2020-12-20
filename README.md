@@ -1,22 +1,28 @@
 # IPv6 DDNSPod Free API
-This service offers a REST API allowing to get a visitor IPv6-Only address and to query location information from any IPv6 address. It outputs JSON-encoded IP geolocation data.
+This service offers a REST API allowing to get a visitor IPv6 address and to query location information from any IPv6 address. It outputs JSON-encoded IP geolocation data.
 
-## GetIP (Get IPv6 address in plain text format):
-Returns the visitor IPv6 address in plain text, useful for shell scripts or to find the external Internet routable address.
+## GetIP (Get IPv4&IPv6 address in plain text format):
+Returns the visitor IPv4&IPv6 address in plain text, useful for shell scripts or to find the external Internet routable address.
 
 - Example (Plain text):  
- `https://ipv6.ddnspod.com:444`  
+ `https://ip.ddnspod.com`  
 - Example (curl):  
- `curl ipv6.ddnspod.com:81`  
+ `curl ip.ddnspod.com`  
 
 #### Usage example (Shell script): 
 
 ```shell
 #!/bin/sh
 
-ipv6=$(curl -s https://ipv6.ddnspod.com:444)
-echo "My public IPv6 address is: $ipv6"
+ip=$(curl -s https://ip.ddnspod.com)
+echo "My public IP address is: $ipv6"
 ```  
+
+#### Echo example: 
+
+```shell
+My public IP address is: 1.1.1.1
+``` 
 
 ## Splicing IPv6 (Get appending IPv6 address in plain text format):
 Calling the API endpoint without any parameter will return IPv6 prefix for the visitor:
