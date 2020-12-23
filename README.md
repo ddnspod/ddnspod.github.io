@@ -6,22 +6,29 @@ Returns the visitor IPv4&IPv6 address in plain text, useful for shell scripts or
 
 - Example (Plain text):  
  `https://ip.ddnspod.com`  
+ `https://ipv4.ddnspod.com`  
+ `https://ipv6.ddnspod.com`  
 - Example (curl):  
  `curl ip.ddnspod.com`  
+ `curl ip.ddnspod.com -4`  
+ `curl ip.ddnspod.com -6`  
 
 #### Usage example (Shell script): 
 
-```shell
-#!/bin/sh
+```bash
+#!/bin/bash
 
-ip=$(curl -s https://ip.ddnspod.com)
-echo "My public IP address is: $ip"
+ipv4=$(curl -s https://ip.ddnspod.com -4)
+ipv6=$(curl -s https://ip.ddnspod.com -6)
+echo "My public IPv4 address is: $ipv4"
+echo "My public IPv6 address is: $ipv6"
 ```  
 
 #### Echo example: 
 
 ```shell
-My public IP address is: 1.1.1.1
+My public IPv4 address is: 1.2.3.4
+My public IPv6 address is: 2001:2:3:4:5:6:7:8
 ``` 
 
 ## Splicing IPv6 (Get appending IPv6 address in plain text format):
