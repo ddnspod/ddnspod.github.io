@@ -26,7 +26,7 @@ echo "My public IPv6 address is: $ipv6"
 
 #### Echo example: 
 
-```shell
+```bash
 My public IPv4 address is: 1.2.3.4
 My public IPv6 address is: 2001:2:3:4:5:6:7:8
 ``` 
