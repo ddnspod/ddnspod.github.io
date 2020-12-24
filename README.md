@@ -5,9 +5,11 @@ This service offers a REST API allowing to get a visitor IPv4&IPv6 address and t
 Returns the visitor IPv4&IPv6 address in plain text, useful for shell scripts or to find the external Internet routable address.
 
 - Example (Plain text):  
- `https://ip.ddnspod.com`  
- `https://ipv4.ddnspod.com`  
- `https://ipv6.ddnspod.com`  
+```text
+https://ip.ddnspod.com
+https://ipv4.ddnspod.com
+https://ipv6.ddnspod.com
+```
 - Example (curl):  
  `curl ip.ddnspod.com`  
  `curl ip.ddnspod.com -4`  
