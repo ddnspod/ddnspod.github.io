@@ -133,14 +133,16 @@ Output example:
 
 ## Get Timestamp
 Appending parameters to obtain timestamps with different precision(second millisecond microsecond nanosecond).
-
-- The default is the millisecond timestamp:  
 ```text
-GET /timestamp
 GET /timestamp/s
 GET /timestamp/ms
 GET /timestamp/us
 GET /timestamp/ns
+```
+
+- The default is the millisecond timestamp:  
+```text
+GET /timestamp
 ```
 
 ## Errors
