@@ -11,12 +11,13 @@ https://ipv4.ddnspod.com
 https://ipv6.ddnspod.com
 ```
 - Example (curl):  
- `curl ip.ddnspod.com`  
- `curl ip.ddnspod.com -4`  
- `curl ip.ddnspod.com -6`  
+```curl
+curl ip.ddnspod.com
+curl ip.ddnspod.com -4
+curl ip.ddnspod.com -6
+```
 
 #### Usage example (Shell script): 
-
 ```bash
 #!/bin/bash
 
@@ -27,7 +28,6 @@ echo "My public IPv6 address is: $ipv6"
 ```  
 
 #### Echo example: 
-
 ```bash
 My public IPv4 address is: 1.2.3.4
 My public IPv6 address is: 2001:2:3:4:5:6:7:8
@@ -36,33 +36,42 @@ My public IPv6 address is: 2001:2:3:4:5:6:7:8
 ## Splicing IPv6 (Get appending IPv6 address in plain text format):
 Calling the API endpoint without any parameter will return IPv6 prefix for the visitor:
 
-- Example (JSON):  
- `GET /prefix`  
+- Example (Plain text):  
+```text
+GET /prefix
+```
 
 Get IPv6 prefix for the visitor and Appending an IPv6 suffix as parameter return this IPv6 address:
 
-- Example (JSON):  
- `GET /prefix/1:2:3:4`  
-  or:  
- `GET /prefix/:5`  
-
+- Example (Plain text):  
+```text
+GET /prefix/1:2:3:4
+GET /prefix/:5
+or
+GET /prefix?suffix=1:2:3:4
+GET /prefix?suffix=:5
+```
 
 ## GeoIP (Get IPv6 address location in JSON format):
 Calling the API endpoint without any parameter will return location information for the visitor IPv6 address:
 
 - Example (JSON):  
- `GET /geoip`  
-- Example (Format-JSON):  
- `GET /geoip/format`  
+```text
+GET /geoip
+GET /geoip/format
+```
 
 
 Appending an IP address as parameter will return location information for this IPv6 address:
 
 - Example (JSON):  
- `GET /geoip/2400:3200::1`  
-
-- Example (Format-JSON):  
- `GET /geoip/format/2400:3200::1`  
+```text
+GET /geoip/2400:3200::1
+GET /geoip/format/2400:3200::1
+or
+GET /geoip?ipv6=2400:3200::1
+GET /geoip/format?ipv6=2400:3200::1
+ ```
 
 
 #### GeoIP Output Schema
@@ -104,10 +113,13 @@ Output example:
 Use CIDR notation to provide information about a given IPv6 address range.
 
 - Enter the starting and ending IPv6 address respectively:  
- `GET /cidr/2400:3200::/2400:3200:ffff::`  
-
-- Enter the starting and ending IPv6 address respectively (Format-JSON):  
- `GET /cidr/format/2400:3200::/2400:3200:ffff::`  
+```text
+GET /cidr/2400:3200::/2400:3200:ffff::
+GET /cidr/format/2400:3200::/2400:3200:ffff::
+or
+GET /cidr?start=2400:3200::&end=2400:3200:ffff::
+GET /cidr/format?start=2400:3200::&end=2400:3200:ffff::
+```
 
 Output example:
 
@@ -120,22 +132,16 @@ Output example:
 ```  
 
 ## Get Timestamp
-Appending parameters to obtain timestamps with different precision.
+Appending parameters to obtain timestamps with different precision(second millisecond microsecond nanosecond).
 
-- The second timestamps:  
- `GET /timestamp/s`  
- 
-- The millisecond timestamps (Default):  
- `GET /timestamp`  
-  or:  
- `GET /timestamp/ms`  
- 
-- The microsecond timestamps:  
- `GET /timestamp/us`  
- 
-- The nanosecond timestamps:  
-  `GET /timestamp/ns`  
-
+- The default is the millisecond timestamp:  
+```text
+GET /timestamp
+GET /timestamp/s
+GET /timestamp/ms
+GET /timestamp/us
+GET /timestamp/ns
+```
 
 ## Errors
 ### Client Errors
