@@ -138,6 +138,11 @@ GET /timestamp/s
 GET /timestamp/ms
 GET /timestamp/us
 GET /timestamp/ns
+or
+GET /timestamp?precision=s
+GET /timestamp?precision=ms
+GET /timestamp?precision=us
+GET /timestamp?precision=ns
 ```
 
 - The default is the millisecond timestamp:  
