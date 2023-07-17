@@ -1,6 +1,17 @@
 # IPv6 DDNSPod Free API
 This service offers a REST API allowing to get a visitor IPv4&IPv6 address and to query location information from any IPv6-Only address, It outputs JSON-encoded IP geolocation data.
 
+<details>
+<summary>Notice</summary>
+<details>
+<summary>2023-07-16:Notice about satellite map:</summary>
+<p>
+Petal Maps has temporarily closed the satellite map function of most countries. Currently, the satellite map function is only available in 30 countries, including Hong Kong (China), Laos, Philippines, Sri Lanka, Malaysia, Bangladesh, Cambodia, Myanmar, Indonesia, Thailand, Singapore, Saudi Arabia, South Africa, Egypt, Iraq, United Arab Emirates, Jordan, Morocco, Oman, Tunisia, Kuwait, Pakistan, Qatar, Mauritius, Algeria, Lebanon, Bahrain, Kenya, Ghana, Nigeria.
+The satellite map function of other countries is temporarily closed, please pay attention to the follow-up notice for the recovery time, thank you.
+</p>
+</details>
+</details>
+
 ## 1. GetIP (Get IPv4&IPv6 address in plain text format):
 1.1 Returns the visitor IPv4&IPv6 address in plain text, useful for shell scripts or to find the external Internet routable address.
 
