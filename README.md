@@ -4,9 +4,6 @@ This service offers a REST API allowing to get a visitor IPv4&IPv6 address and t
 ## 1. GetIP (Get IPv4&IPv6 address in plain text format):
 1.1 Returns the visitor IPv4&IPv6 address in plain text, useful for shell scripts or to find the external Internet routable address.
 
-> [!CAUTION]
-> Negative potential consequences of an action.
-
 - Example (Plain text):  
 ```text
 http(s)://ip.ddnspod.com
